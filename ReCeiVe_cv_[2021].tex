@@ -1,0 +1,97 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cv BENGO
+% LuaLaTeX Template
+% Version 1.12.0 (11/04/2024)
+%
+% Original authors:
+% Ged Lex (gedlex@hotmail.ch)
+%
+% Important note:
+% This template must be compiled with LuaLaTeX, the below lines will ensure this
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+
+%----------------------------------------------------------------------------------------
+\documentclass[rightPos]{ReCeiVe}      % By default, use 'letterpaper' for US letter
+%\geometry{letterpaper, % paper size
+%          left=1.75cm, right=1.75cm, top=1.5cm, bottom=1.5cm, footskip=.6cm, headsep=.5cm, % margins
+%          showframe}                  % show geometry frame
+%          heightrounded}              % avoid underfull vbox warning
+ \usepackage{xcolor} 
+ \usepackage{multicol}
+% Color for highlights
+%\definecolor{highlight}{HTML}{FF0000} % Specify your own color
+%\colorlet{highlight}{white}           % Set predefined color
+% Default colors include: darkgray, gray, lightgray, lightblue, orange, red, concrete
+
+%Colors for text - uncomment and modify
+%\definecolor{darktext}{HTML}{FF0000}
+%\definecolor{text}{HTML}{FF0000}
+%\definecolor{graytext}{HTML}{FF0000}
+%\definecolor{lighttext}{HTML}{414141}
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%----------------------------------------------------------------------------------------
+\background{pics/background5.pdf}
+\photo[rectangle,edge,nofill,left]{5cm}{pics/pp2.pdf}
+\name{Dylane}{Bengono}
+\homepage{bio.link/chaneldy}
+\mobile{237 6 91 45 77 03}
+\email{chaneldylanebengono@gmail.com}
+\linkedin{chanel-dylane-b-91b850194/}
+\github{Bengo237}
+\extrainfo{24 years old}
+
+%\twitter{@twit}
+%\xing{xing name}
+%\stackoverflow{SOid}{SOname}
+%\skype{skypeid}
+%\reddit{reddit account}
+%\extrainfo{info}
+
+\position{Security Engineer | DevSecOps} % Your expertise/domains
+\headwords{Engineer, software enthusiast, technical enthusiast and carpenter} % Some keywords to describe you
+
+\quote{"Some people see things as they are and ask why. I dream of things that never were and ask why not." - Robert Kennedy}
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR CONTENT
+%	Fill in the information you would like to add to your sidebar
+%----------------------------------------------------------------------------------------
+
+\aboutMe {Dedicated Cybersecurity Analyst,proficient in safeguarding endpoints, providing DevOps support, deploying SIEM solutions, and implementing NAC frameworks. Actively participates in Capture The Flag competitions for continuous skill enhancement and innovative problem-solving}
+\skillset[label/0\hfill +500 h]{ Pentest/.8,IT Standards and References/.7, Network Security/.9, Virtualization and Cloud/.8, Cryptography/.6 , IAM/.6}
+\languages{{English/C1}, {French/C2}}
+
+
+% Usage: \userSection[<section title>]{<content>}
+% \userSection[title]{content}
+
+%----------------------------------------------------------------------------------------
+\begin{document}
+% Print the header
+% Usage: \makecvheader[<position>]
+\makecvheader
+% Print the sidebar
+% Usage: \makecvsidebar[xOffset/value,yOffset/value,noRadius|radius]
+\makecvsidebar
+%----------------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in order to modify it
+%----------------------------------------------------------------------------------------
+\vspace{3mm}
+\input{cvSections/professionalExperience.tex}
+\input{cvSections/education.tex}
+\input{cvSections/honors.tex}
+\vspace{3mm}
+%\input{cvSections/honors.tex}
+
+
+%----------------------------------------------------------------------------------------
+\end{document}
