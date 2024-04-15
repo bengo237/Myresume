@@ -13,8 +13,10 @@ jobs:
         compiler: lualatex
     - name: Rename output file
       run: mv ReCeiVe_cv_[2021].pdf "Dylane Bengono DevsecOps.pdf"
-    - name: Upload PDF
-      uses: actions/upload-artifact@v2
-      with:
-        name: PDF
-        path: "Dylane Bengono DevsecOps.pdf"
+    - name: Commit and push
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add "Dylane Bengono DevsecOps.pdf"
+        git commit -m "Add generated PDF"
+        git push
