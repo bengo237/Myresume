@@ -1,0 +1,24 @@
+name: Build LaTeX document
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.GH_PAT }}
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: ReCeiVe_cv_[2021].tex
+        compiler: lualatex
+    - name: Rename output file
+      run: mv ReCeiVe_cv_[2021].pdf "Dylane Bengono DevsecOps.pdf"
+    - name: Commit and push
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add "Dylane Bengono DevsecOps.pdf"
+        git commit -m "Add generated PDF"
+        git push
