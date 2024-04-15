@@ -11,3 +11,10 @@ jobs:
       with:
         root_file: ReCeiVe_cv_[2021].tex
         compiler: lualatex
+    - name: Rename output file
+      run: mv ReCeiVe_cv_[2021].pdf "Dylane Bengono DevsecOps.pdf"
+    - name: Upload PDF
+      uses: actions/upload-artifact@v2
+      with:
+        name: PDF
+        path: "Dylane Bengono DevsecOps.pdf"
