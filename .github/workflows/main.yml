@@ -16,12 +16,10 @@ jobs:
       with:
         root_file: ReCeiVe_cv_[2021].tex
         compiler: lualatex
-    - name: Rename output file
-      run: mv ReCeiVe_cv_[2021].pdf "Dylane Bengono DevsecOps.pdf"
     - name: Commit and push
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add "Dylane Bengono DevsecOps.pdf"
+        git add ReCeiVe_cv_[2021].pdf
         git commit -m "Add generated PDF"
         git push
